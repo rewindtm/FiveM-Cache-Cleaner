@@ -1,5 +1,15 @@
 # FiveM Cache Cleaner 🧹
 
+> **New in v2.0:** a native Windows app (WPF, .NET 10) with a graphical interface. Download `FiveMCacheCleaner.exe` from the [Releases](https://github.com/rewindtm/FiveM-Cache-Cleaner/releases) page: no install, no .NET required. It auto-detects FiveM, previews the space each folder would free, warns you if FiveM is running and reports locked files. The original batch script is still available as `cleanup-fivem.bat`.
+>
+> **Novità v2.0:** app nativa per Windows (WPF, .NET 10) con interfaccia grafica. Scarica `FiveMCacheCleaner.exe` dalla pagina [Releases](https://github.com/rewindtm/FiveM-Cache-Cleaner/releases): nessuna installazione e nessun .NET richiesto. Trova FiveM da sola, mostra in anteprima lo spazio liberabile, avvisa se FiveM è aperto e segnala i file bloccati. Lo script batch originale resta disponibile come `cleanup-fivem.bat`.
+
+Build from source / compilare dai sorgenti:
+```sh
+cd src
+dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:EnableCompressionInSingleFile=true
+```
+
 This project contains a **Windows Batch script** that automates the cleanup of **FiveM cache** and system temporary folders.  
 Its purpose is to improve **FiveM client performance**, reduce crashes, and free up disk space.
 
