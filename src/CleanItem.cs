@@ -8,19 +8,21 @@ public sealed class CleanItem : INotifyPropertyChanged
     private bool _isSelected;
     private string _info = "—";
 
-    public CleanItem(string name, string description, string path, bool isSelected, bool isSystem)
+    public CleanItem(string group, string icon, string name, string description, string path, bool isSelected)
     {
+        Group = group;
+        Icon = icon;
         Name = name;
         Description = description;
         Path = path;
         _isSelected = isSelected;
-        IsSystem = isSystem;
     }
 
+    public string Group { get; }
+    public string Icon { get; }
     public string Name { get; }
     public string Description { get; }
     public string Path { get; set; }
-    public bool IsSystem { get; }
 
     public long Files { get; set; }
     public long Bytes { get; set; }
